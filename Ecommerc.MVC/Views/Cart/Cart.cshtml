@@ -1,0 +1,29 @@
+﻿@model List<Ecommerce.Dtos.Book.BookDetailsViewModel>
+
+<h2>Shopping Cart</h2>
+
+<div calss="container">
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Your shopping cart is empty.</p>
+    }
+</div>
